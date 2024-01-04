@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="msanchezTallerS2.Vistas.Vlogin"
+             Title="Vlogin">
+    <VerticalStackLayout Spacing="40" Padding="40" BackgroundColor="#E0E6F8">
+
+        <Label 
+            Text="Ventana de Login "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="18"/>
+      
+        <Image 
+            Source="https://revista.uisrael.edu.ec/images/uisrael.png"
+            WidthRequest="250"
+            />
+
+        <Grid>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO:"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="txtUsuario"   
+                   Placeholder="Ingrese su usuario"
+                   Margin="0,0,0,20"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="CONTRASEÑA:"
+                   FontSize="20"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingrese su contrasena"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   IsPassword="True"
+                   Margin="0,0,0,20"/>
+        </Grid>
+
+        <Button x:Name="btnIniciar"
+                Text="INICIAR SESIÓN"
+                Clicked="btnIniciar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

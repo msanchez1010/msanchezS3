@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="msanchezTallerS2.Vistas.vPrincipal"
+             Title="vPrincipal">
+    <VerticalStackLayout Spacing="20" Padding="40" BackgroundColor="#E0E6F8">
+        <Label x:Name="lblUsuario"
+              FontSize="14"
+              HorizontalTextAlignment="End"
+              TextColor="Red"/>
+
+        <Label 
+            Text="Semana 3: Reporte de Notas"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Parcial 1"
+            FontSize="25"
+            HorizontalTextAlignment="Center"
+            />
+
+        <Picker x:Name="pkEstudiantes" Title="Escoja el estudiante">
+            <Picker.Items>
+                <x:String>Danny Sanchez</x:String>
+                <x:String>Moises Castillo</x:String>
+                <x:String>Raul Garcia</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry x:Name="txtNotaSeguimiento1" TextChanged="txtNotaSeguimiento1_TextChanged"
+               Placeholder="Ingrese nota de seguimiento 1"
+               Keyboard="Numeric"
+               />
+
+        <Entry x:Name="txtNotaExamen1" TextChanged="txtNotaExamen1_TextChanged"
+               Placeholder="Ingrese Nota de Examen 1"
+               Keyboard="Numeric"
+               />
+
+        <Label 
+            Text="Parcial 2"
+            FontSize="25"
+            HorizontalTextAlignment="Center"
+            />
+
+        <Entry x:Name="txtNotaSeguimiento2" TextChanged="txtNotaSeguimiento2_TextChanged"
+               Placeholder="Ingrese nota de seguimiento 2"
+               Keyboard="Numeric"
+               />
+
+        <Entry x:Name="txtNotaExamen2" TextChanged="txtNotaExamen2_TextChanged"
+               Placeholder="Ingrese Nota de Examen 2"
+               Keyboard="Numeric"
+               />
+
+        <Button x:Name="btnClacular"
+                Text="Calcular Nota Final"
+                Clicked="btnClacular_Clicked" 
+                />
+
+    </VerticalStackLayout>
+</ContentPage>
